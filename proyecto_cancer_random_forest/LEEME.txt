@@ -1,0 +1,19 @@
+PROYECTO DE PREDICCIÓN DE CÁNCER DE MAMA CON RANDOM FOREST
+
+1. Instala Python 3.11 o 3.12 recomendado para una instalación estable de scikit-learn.
+2. Abre PowerShell en esta carpeta.
+3. Instala dependencias:
+   python -m pip install -r requirements.txt
+4. Entrena el nuevo modelo y genera los archivos .pkl:
+   python entrenar_modelo.py
+5. Inicia la API:
+   python -m uvicorn api:app --reload
+6. Comprueba la API:
+   http://127.0.0.1:8000/
+   Documentación: http://127.0.0.1:8000/docs
+7. Abre index.html con Live Server en VS Code. La API debe seguir ejecutándose.
+
+El HTML mantiene el formulario manual de 30 características y el resultado breve en español.
+El modelo de esta carpeta es RandomForestClassifier; no es el modelo anterior.
+La exactitud que imprime entrenar_modelo.py corresponde a una partición de prueba y no garantiza resultados clínicos.
+Este proyecto es educativo y no debe utilizarse para diagnosticar ni tomar decisiones médicas.
